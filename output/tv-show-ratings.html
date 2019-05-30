@@ -3,8 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>TV Show Ratings</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
-        <link href="sampurkiss.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sam's Blog Atom Feed" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,16 +12,17 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="./">Sam's Blog </a></h1>
+                <h1><a href="/">Sam's Blog </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="./category/movies.html">Movies</a></li>
+                    <li><a href="/category/just-for-fun.html">Just for fun</a></li>
+                    <li class="active"><a href="/category/movies.html">Movies</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="./tv-show-ratings.html" rel="bookmark"
+        <a href="/tv-show-ratings.html" rel="bookmark"
            title="Permalink to TV Show Ratings">TV Show Ratings</a></h1>
     </header>
 
@@ -37,10 +37,10 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="./author/sam-purkiss.html">Sam Purkiss</a>
+                By                         <a class="url fn" href="/author/sam-purkiss.html">Sam Purkiss</a>
         </address>
-<p>In <a href="./category/movies.html">Movies</a>.</p>
-<p>tags: <a href="./tag/tv-show.html">tv show</a> <a href="./tag/historical.html">historical</a> <a href="./tag/ratings.html">ratings</a> </p>
+<p>In <a href="/category/movies.html">Movies</a>.</p>
+<p>tags: <a href="/tag/tv-show.html">tv show</a> <a href="/tag/historical.html">historical</a> <a href="/tag/ratings.html">ratings</a> </p>
 </footer><!-- /.post-info -->      
        <p>Have you ever wondered if your favourite TV show has 
 	   gotten worse over time (where are those Game of Thrones 
@@ -54,6 +54,11 @@
 	   over time.<br><br></p>
 		<iframe align="middle" ; frameborder="0;" height="600" ; width="900" ; src="https://imdb-tv-rating-app.herokuapp.com/">
 		</iframe>
+		
+		<p>If you're curious about how I built this graph 
+		you can check out my code <a href="https://github.com/sampurkiss/movie_ratings_imdb/blob/master/dash_app.py"><font color="blue"><b>here</b></font></a>.<br>
+		You can also check out the dataset I put together 
+		using IMDB data <a href="https://raw.githubusercontent.com/sampurkiss/movie_ratings_imdb/master/episode_rating_database.csv"><font color="blue"><b>here</b></font></a>.</p>
     
     </div><!-- /.entry-content -->
 
@@ -72,7 +77,6 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="sampurkiss.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="#">You can add links in your config file</a></li>
                             <li><a href="#">Another social link</a></li>
