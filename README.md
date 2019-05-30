@@ -1,2 +1,2 @@
 # sampurkiss.github.io
-Source for my blog
+This is where I deploy my blog from.
