@@ -12,6 +12,11 @@
 	   over time.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 		&lt;iframe align="middle" ; frameborder="0;" height="600" ; width="900" ; src="https://imdb-tv-rating-app.herokuapp.com/"&gt;
 		&lt;/iframe&gt;
+		
+		&lt;p&gt;If you're curious about how I built this graph 
+		you can check out my code &lt;a href="https://github.com/sampurkiss/movie_ratings_imdb/blob/master/dash_app.py"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;br&gt;
+		You can also check out the dataset I put together 
+		using IMDB data &lt;a href="https://raw.githubusercontent.com/sampurkiss/movie_ratings_imdb/master/episode_rating_database.csv"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;/p&gt;
     </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Gender Differences in Movie Ratings</title><link href="sampurkiss.github.io/movie-ratings.html" rel="alternate"></link><published>2019-05-08T20:00:00-04:00</published><updated>2019-05-08T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-05-08:sampurkiss.github.io/movie-ratings.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
@@ -1164,7 +1169,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Gender-Disparity-in-IMDB-Ratings"&gt;Gender Disparity in IMDB Ratings&lt;a class="anchor-link" href="#Gender-Disparity-in-IMDB-Ratings"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Do you remember when they announced Ghostbusters was being remade with female leads? People seemed pretty upset about it. Almost immediately, after release, the films rating tanked. Was it a bad movie? Maybe. But a quick look at &lt;a href="https://www.imdb.com/title/tt1289401/ratings?demo=imdb_users"&gt;IMDB's ratings&lt;/a&gt; shows that although 17% of raters gave it 1 star, 11% of users gave it ten stars. This type of disparity is pretty uncommon - ratings don't usually follow this barbell pattern. Digging deeper I realized that about 24% of all women who rated the movie gave 10 stars but about 20% of all men gave 1 star. Because there were three times more men rating the film than women, ratings from men had a much more significant impact. This made me wonder if there are other films where there's a rating disparity between men and women.&lt;/p&gt;
+&lt;p&gt;Do you remember when they announced Ghostbusters was being remade with female leads? People seemed pretty upset about it. Almost immediately, after release, the films rating tanked. Was it a bad movie? Maybe. But a quick look at &lt;a href="https://www.imdb.com/title/tt1289401/ratings?demo=imdb_users"&gt;IMDB's ratings&lt;/a&gt; shows that although 17% of raters gave it 1 star, 11% of users gave it ten stars. This type of disparity is pretty uncommon - ratings don't usually follow this barbell pattern. Digging deeper I realized that about 24% of all women who rated the movie gave 10 stars but about 20% of all men gave 1 star. Because there were three times more men rating the film than women, ratings from men had a much more significant impact. This made me wonder if there are other films where there's a rating disparity between men and women.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1745,45 +1750,6 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
  
 
 
@@ -1815,4 +1781,4 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="first posts python"></category></entry></feed>
+</summary><category term="movie ratings"></category></entry></feed>
