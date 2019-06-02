@@ -1240,8 +1240,8 @@ h6:hover .anchor-link {
 <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;key&#39;</span><span class="p">,</span><span class="s1">&#39;num_of_songs&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;key&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;key&#39;</span><span class="p">,</span><span class="n">values</span> <span class="o">=</span> <span class="s1">&#39;num_of_songs&#39;</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Music Keys Over Time&#39;</span><span class="p">)</span>
 <span class="n">temp</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Music Keys Over Time&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
 </pre></div>
 
@@ -1657,10 +1657,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-<div id="edd3620a-d806-41c3-909e-5da6a9eba1c3"></div>
+<div id="58d3e100-9116-4505-b915-bf2b19a56f12"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#edd3620a-d806-41c3-909e-5da6a9eba1c3');
+var element = $('#58d3e100-9116-4505-b915-bf2b19a56f12');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "6d61f44bb07941e0824fa1af3b79f373", "version_major": 2, "version_minor": 0}
@@ -1707,10 +1707,10 @@ var element = $('#edd3620a-d806-41c3-909e-5da6a9eba1c3');
 
  
  
-<div id="934c66c8-7520-43cc-a25d-8ae0cf2d7eef"></div>
+<div id="054a3467-f7b9-4ad8-af4f-b1d6d6e05287"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#934c66c8-7520-43cc-a25d-8ae0cf2d7eef');
+var element = $('#054a3467-f7b9-4ad8-af4f-b1d6d6e05287');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "bdbabcfbbd0b46e8a9e66a71257d7f1f", "version_major": 2, "version_minor": 0}
