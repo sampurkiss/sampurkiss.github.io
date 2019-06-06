@@ -17,11 +17,6 @@
 		you can check out my code &lt;a href="https://github.com/sampurkiss/movie_ratings_imdb/blob/master/dash_app.py"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;br&gt;
 		You can also check out the dataset I put together 
 		using IMDB data &lt;a href="https://raw.githubusercontent.com/sampurkiss/movie_ratings_imdb/master/episode_rating_database.csv"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;/p&gt;
-    </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io/tweet-a-quote.html" rel="alternate"></link><published>2019-05-17T22:28:00-04:00</published><updated>2019-05-17T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-05-17:sampurkiss.github.io/tweet-a-quote.html</id><summary type="html">
-       &lt;p&gt;Enter in the name of a famous person. My bot will tweet a random quote by them.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-		&lt;iframe align="middle" ; frameborder="0;" height="600" ; width="900" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
-		&lt;/iframe&gt;
-		
     </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Gender Differences in Movie Ratings</title><link href="sampurkiss.github.io/movie-ratings.html" rel="alternate"></link><published>2019-05-08T20:00:00-04:00</published><updated>2019-05-08T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-05-08:sampurkiss.github.io/movie-ratings.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook

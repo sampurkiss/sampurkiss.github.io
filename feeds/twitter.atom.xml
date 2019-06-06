@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io/feeds/twitter.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-06-04T22:28:00-04:00</updated><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io/tweet-a-quote.html" rel="alternate"></link><published>2019-06-04T22:28:00-04:00</published><updated>2019-06-04T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-06-04:sampurkiss.github.io/tweet-a-quote.html</id><summary type="html">
+       &lt;p&gt;Enter in the name of a famous person. My bot will tweet a random quote by them.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+		&lt;iframe align="middle" ; id="input-form-pointer" frameborder="0;" height="600" ; width="900" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
+		&lt;/iframe&gt;
+		
+    </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry></feed>
