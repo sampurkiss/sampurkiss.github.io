@@ -1674,10 +1674,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-&lt;div id="f43fafd0-11c7-4ad5-8c4a-4441167c7bc6"&gt;&lt;/div&gt;
+&lt;div id="8e3d65d5-a7e0-4e22-b256-8ae7a804363e"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#f43fafd0-11c7-4ad5-8c4a-4441167c7bc6');
+var element = $('#8e3d65d5-a7e0-4e22-b256-8ae7a804363e');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -1725,10 +1725,10 @@ var element = $('#f43fafd0-11c7-4ad5-8c4a-4441167c7bc6');
 
  
  
-&lt;div id="4a593215-4c73-404d-9cec-a5ee776c2cfc"&gt;&lt;/div&gt;
+&lt;div id="aa3257ab-395a-40fd-a36b-bd439c05cea5"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#4a593215-4c73-404d-9cec-a5ee776c2cfc');
+var element = $('#aa3257ab-395a-40fd-a36b-bd439c05cea5');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}
@@ -3183,6 +3183,11 @@ Therefore it doesn't matter what size the dead army is, as long as the army of t
 		you can check out my code &lt;a href="https://github.com/sampurkiss/movie_ratings_imdb/blob/master/dash_app.py"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;br&gt;
 		You can also check out the dataset I put together 
 		using IMDB data &lt;a href="https://raw.githubusercontent.com/sampurkiss/movie_ratings_imdb/master/episode_rating_database.csv"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;/p&gt;
+    </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io/tweet-a-quote.html" rel="alternate"></link><published>2019-05-17T22:28:00-04:00</published><updated>2019-05-17T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-05-17:sampurkiss.github.io/tweet-a-quote.html</id><summary type="html">
+       &lt;p&gt;Enter in the name of a famous person. My bot will tweet a random quote by them.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+		&lt;iframe align="middle" ; frameborder="0;" height="600" ; width="900" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
+		&lt;/iframe&gt;
+		
     </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Gender Differences in Movie Ratings</title><link href="sampurkiss.github.io/movie-ratings.html" rel="alternate"></link><published>2019-05-08T20:00:00-04:00</published><updated>2019-05-08T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-05-08:sampurkiss.github.io/movie-ratings.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
