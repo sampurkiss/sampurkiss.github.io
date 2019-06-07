@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io/feeds/all.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-06-04T22:28:00-04:00</updated><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io/tweet-a-quote.html" rel="alternate"></link><published>2019-06-04T22:28:00-04:00</published><updated>2019-06-04T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-06-04:sampurkiss.github.io/tweet-a-quote.html</id><summary type="html">
-       &lt;p&gt;Enter in the name of a famous person. My bot will tweet a random quote by them.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-		&lt;iframe align="middle" ; frameborder="0;" height="250" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
+       &lt;p&gt;Enter in the name of a famous person. Once you submit, my bot will find and tweet a random quote by them. 
+	   You will be able to see the tweet once it's sent.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+		&lt;iframe align="middle" ; frameborder="0;" height="400" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
 		&lt;/iframe&gt;
 	
-	&lt;p&gt;Stay tuned for more details on my code&lt;/p&gt;
+	&lt;p&gt;With each of the things I build, my objective is to learn something I don't know yet.
+	In this case, I wanted to figure out how Django works and get better at deploying apps.
+	I've already done some work with AWS but I wanted to really learn how to build the backend
+	of a website from scratch and then figure out how to share it.&lt;br&gt;
+	I already had an existing Twitterbot that would do a bunch of things like tweet a quote
+	every few hours, DM new followers, follow people back, unfollow anyone who unfollowed me
+	(that's right, my bot was built to be petty).&lt;br&gt;
+	I decided to recycle this bot and build something that's actually interactive. Using 
+	Django I built an app that takes a name, searches for it on a specific website
+	and webscrapes a random quote by that person. I kept the quote webscraping component &lt;a href="https://github.com/sampurkiss/twitterbots/blob/master/get_quote_functions.py"&gt;
+	(see here for the code) &lt;/a&gt; and simply modified it to take a value from an HTML input 
+	form. Then I just had to build a website with a user form, find a way to pass whatever 
+	value was inputted into said uniform, pass it through my python functions and return
+	the results on another webpage. Lastly, I had to modify all my scritps so I could
+	actually deploy it for use by the general public. I used Heroku for deployment since
+	I already have some familiar with it and since it integrates super well with Django and Github.&lt;br&gt;
+	Once all that was done I still had to figure out how to embed the webpage into my blog 
+	in such a way that it was seamlessly integrated (and so that it works).&lt;br&gt;
+	Overall, figuring out how to build the backend of a website was tough but I'm really 
+	pleased I was able to make something that works.
+	&lt;/p&gt;
 	
-    </summary><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>K-means Clustering to Create Custom Spotify Playlists</title><link href="sampurkiss.github.io/spotify-playlists.html" rel="alternate"></link><published>2019-06-02T00:23:00-04:00</published><updated>2019-06-02T00:23:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-06-02:sampurkiss.github.io/spotify-playlists.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+    </summary><category term="twitter"></category><category term="django"></category><category term="twitterbot"></category></entry><entry><title>K-means Clustering to Create Custom Spotify Playlists</title><link href="sampurkiss.github.io/spotify-playlists.html" rel="alternate"></link><published>2019-06-02T00:23:00-04:00</published><updated>2019-06-02T00:23:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-06-02:sampurkiss.github.io/spotify-playlists.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1681,10 +1702,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-&lt;div id="fbb0f2a0-564b-43ba-abdc-767627fbbae4"&gt;&lt;/div&gt;
+&lt;div id="f758d78a-e11d-484c-b743-076464debfd2"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#fbb0f2a0-564b-43ba-abdc-767627fbbae4');
+var element = $('#f758d78a-e11d-484c-b743-076464debfd2');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -1732,10 +1753,10 @@ var element = $('#fbb0f2a0-564b-43ba-abdc-767627fbbae4');
 
  
  
-&lt;div id="38703575-dbc0-4423-9ab9-fb9a89770aa4"&gt;&lt;/div&gt;
+&lt;div id="54e032f6-867d-47ab-b9d6-0d85d59cbaea"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#38703575-dbc0-4423-9ab9-fb9a89770aa4');
+var element = $('#54e032f6-867d-47ab-b9d6-0d85d59cbaea');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}

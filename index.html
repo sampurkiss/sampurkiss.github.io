@@ -39,11 +39,32 @@
                 
 
                 
-       <p>Enter in the name of a famous person. My bot will tweet a random quote by them.<br><br></p>
-		<iframe align="middle" ; frameborder="0;" height="250" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/">
+       <p>Enter in the name of a famous person. Once you submit, my bot will find and tweet a random quote by them. 
+	   You will be able to see the tweet once it's sent.<br><br></p>
+		<iframe align="middle" ; frameborder="0;" height="400" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/">
 		</iframe>
 	
-	<p>Stay tuned for more details on my code</p>
+	<p>With each of the things I build, my objective is to learn something I don't know yet.
+	In this case, I wanted to figure out how Django works and get better at deploying apps.
+	I've already done some work with AWS but I wanted to really learn how to build the backend
+	of a website from scratch and then figure out how to share it.<br>
+	I already had an existing Twitterbot that would do a bunch of things like tweet a quote
+	every few hours, DM new followers, follow people back, unfollow anyone who unfollowed me
+	(that's right, my bot was built to be petty).<br>
+	I decided to recycle this bot and build something that's actually interactive. Using 
+	Django I built an app that takes a name, searches for it on a specific website
+	and webscrapes a random quote by that person. I kept the quote webscraping component <a href="https://github.com/sampurkiss/twitterbots/blob/master/get_quote_functions.py">
+	(see here for the code) </a> and simply modified it to take a value from an HTML input 
+	form. Then I just had to build a website with a user form, find a way to pass whatever 
+	value was inputted into said uniform, pass it through my python functions and return
+	the results on another webpage. Lastly, I had to modify all my scritps so I could
+	actually deploy it for use by the general public. I used Heroku for deployment since
+	I already have some familiar with it and since it integrates super well with Django and Github.<br>
+	Once all that was done I still had to figure out how to embed the webpage into my blog 
+	in such a way that it was seamlessly integrated (and so that it works).<br>
+	Overall, figuring out how to build the backend of a website was tough but I'm really 
+	pleased I was able to make something that works.
+	</p>
 	
     
                 <div class="clear"></div>
@@ -52,9 +73,9 @@
                     <a href="./tweet-a-quote.html">posted at 12:00</a>
                     &nbsp;&middot;&nbsp;<a href="./category/twitter.html" rel="tag">Twitter</a>
                     &nbsp;&middot;
-                    &nbsp;<a href="./tag/tv-show.html" class="tags">tv show</a>
-                    &nbsp;<a href="./tag/historical.html" class="tags">historical</a>
-                    &nbsp;<a href="./tag/ratings.html" class="tags">ratings</a>
+                    &nbsp;<a href="./tag/twitter.html" class="tags">twitter</a>
+                    &nbsp;<a href="./tag/django.html" class="tags">django</a>
+                    &nbsp;<a href="./tag/twitterbot.html" class="tags">twitterbot</a>
                 </div>
 		<a href="./tweet-a-quote.html#disqus_thread">Click to read and post comments</a>
             </article>            <h4 class="date">Jun 02, 2019</h4>
@@ -1742,10 +1763,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-<div id="fbb0f2a0-564b-43ba-abdc-767627fbbae4"></div>
+<div id="f758d78a-e11d-484c-b743-076464debfd2"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#fbb0f2a0-564b-43ba-abdc-767627fbbae4');
+var element = $('#f758d78a-e11d-484c-b743-076464debfd2');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -1793,10 +1814,10 @@ var element = $('#fbb0f2a0-564b-43ba-abdc-767627fbbae4');
 
  
  
-<div id="38703575-dbc0-4423-9ab9-fb9a89770aa4"></div>
+<div id="54e032f6-867d-47ab-b9d6-0d85d59cbaea"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#38703575-dbc0-4423-9ab9-fb9a89770aa4');
+var element = $('#54e032f6-867d-47ab-b9d6-0d85d59cbaea');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}
