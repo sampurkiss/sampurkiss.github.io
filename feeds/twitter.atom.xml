@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - Twitter</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/twitter.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-06-04T22:28:00-04:00</updated><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io%5Ctweet-a-quote.html" rel="alternate"></link><published>2019-06-04T12:00:00-04:00</published><updated>2019-06-04T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-06-04:sampurkiss.github.io\tweet-a-quote.html</id><summary type="html">App that lets you submit the name of someone and it will tweet a quote by that person.</summary><content type="html">
+       &lt;p&gt;Enter in the name of a famous person. Once you submit, my bot will find and tweet a random quote by them. 
+	   You will be able to see the tweet once it's sent.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+		&lt;iframe align="middle" ; frameborder="0;" height="400" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
+		&lt;/iframe&gt;
+	
+	&lt;p&gt;With each of the things I build, my objective is to learn something I don't know yet.
+	In this case, I wanted to figure out how Django works and get better at deploying apps.
+	I've already done some work with AWS but I wanted to really learn how to build the backend
+	of a website from scratch and how to share it.&lt;br&gt;
+	I already had an existing Twitterbot that would do a bunch of things like tweet a quote
+	every few hours, DM new followers, follow people back, unfollow anyone who unfollowed me
+	(that's right, my bot was built to be petty).&lt;br&gt;
+	I decided to recycle this bot and build something that's actually interactive. Using 
+	Django I built an app that takes a name, searches for it on a specific website
+	and webscrapes a random quote by that person. I kept the quote webscraping component from
+	my previous bot &lt;a href="https://github.com/sampurkiss/twitterbots/blob/master/get_quote_functions.py"&gt;
+	(see here for the code) &lt;/a&gt; and simply modified it to take a value from an HTML input 
+	form. Then I just had to build a website with a user form, find a way to pass whatever 
+	value was inputted into said form, pass it through my Python functions and return
+	the results on another webpage. Then I had to modify all my scripts so I could
+	actually deploy it for use by the general public. I used Heroku for deployment since
+	I already have some familiarity with it and since it integrates super well with 
+	Django and Github. Lastly, I used my limited HTML knowledge to make it look pretty.&lt;br&gt;
+	Once all that was done I still had to figure out how to embed the webpage into my blog 
+	in such a way that it was seamlessly integrated (and so that it works).&lt;br&gt;
+	Overall, figuring out how to build the backend of a website was tough but I'm really 
+	pleased I was able to make something that works.&lt;br&gt;
+	I always find that when I set out to learn something, I end up learning a million other
+	things I had never thought about. For example, I had never thought about dealing with CSRF, 
+	xframes, switching between GitHub branches, or even the complications of taking values 
+	from user inputs. The lesson of this whole project is that experience really is the best 
+	teacher (and that it's cool to have friends 
+	you can ask for advice - shout out to Monica and Alex).
+	&lt;/p&gt;
+	
+	
+    </content><category term="twitter"></category><category term="django"></category><category term="twitterbot"></category></entry></feed>
