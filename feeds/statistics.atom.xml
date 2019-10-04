@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io/feeds/statistics.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-02-02T14:00:00-05:00</updated><entry><title>Simulating the Monty Hall Problem</title><link href="sampurkiss.github.io/monty-hall-problem.html" rel="alternate"></link><published>2019-02-02T14:00:00-05:00</published><updated>2019-02-02T14:00:00-05:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-02-02:sampurkiss.github.io/monty-hall-problem.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - statistics</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/statistics.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-02-02T14:00:00-05:00</updated><entry><title>Simulating the Monty Hall Problem</title><link href="sampurkiss.github.io%5Cmonty-hall-problem.html" rel="alternate"></link><published>2019-02-02T14:00:00-05:00</published><updated>2019-02-02T14:00:00-05:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-02-02:sampurkiss.github.io\monty-hall-problem.html</id><summary type="html">&lt;p&gt;I simulated the Monty Hall problem 1,000 times to see what the probabilities of picking a new door converged to.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1362,4 +1362,4 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="entertainment"></category><category term="statistics"></category><category term="experiments"></category></entry></feed>
+</content><category term="entertainment"></category><category term="statistics"></category><category term="experiments"></category></entry></feed>

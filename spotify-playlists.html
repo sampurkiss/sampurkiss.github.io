@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Sam's Blog - K-means Clustering to Create Custom Spotify Playlists</title>
         <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sam's Blog | K-means Clustering to Create Custom Spotify Playlists</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link href="sampurkiss.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sam's Blog Full Atom Feed" />
+    <link href="sampurkiss.github.io/feeds/music.atom.xml" type="application/atom+xml" rel="alternate" title="Sam's Blog Categories Atom Feed" />
+    <link rel="stylesheet" href="./theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="./theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Sam Purkiss" />
 
-
-
-
-    <meta name="tags" content="entertainment" />
-    <meta name="tags" content="machine learning" />
-    <meta name="tags" content="playlists" />
-
+    <meta name="keywords" content="entertainment,machine learning,playlists" />
 </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="https://github.com/sampurkiss">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="./">Sam's Blog</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Jun 02, 2019</h4>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Sam's Blog <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="https://github.com/sampurkiss">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a></li>
-            <li><a href="/category/just-for-fun.html">Just for fun</a></li>
-            <li><a href="/category/movies.html">Movies</a></li>
-            <li class="active"><a href="/category/music.html">music</a></li>
-            <li><a href="/category/statistics.html">statistics</a></li>
-            <li><a href="/category/twitter.html">Twitter</a></li>
-        </ul></nav><!-- /#menu -->
-<section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="/spotify-playlists.html" rel="bookmark"
-         title="Permalink to K-means Clustering to Create Custom Spotify Playlists">K-means Clustering to Create Custom Spotify Playlists</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <time class="published" datetime="2019-06-02T00:23:00-04:00">
-      Sun 02 June 2019
-    </time>
-    <address class="vcard author">
-      By           <a class="url fn" href="/author/sam-purkiss.html">Sam Purkiss</a>
-    </address>
-    <div class="category">
-        Category: <a href="/category/music.html">music</a>
-    </div>
-    <div class="tags">
-        Tags:
-            <a href="/tag/entertainment.html">entertainment</a>
-            <a href="/tag/machine-learning.html">machine learning</a>
-            <a href="/tag/playlists.html">playlists</a>
-    </div>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <style type="text/css">/*!
+            <article class="post">
+                <h2 class="title">
+                    <a href="./spotify-playlists.html" rel="bookmark" title="Permanent Link to &quot;K-means Clustering to Create Custom Spotify Playlists&quot;">K-means Clustering to Create Custom Spotify Playlists</a>
+                </h2>
+
+                
+                
+
+                <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -1726,10 +1716,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-<div id="c4fc2fbe-db92-4c9c-a87d-3878b3f16cb1"></div>
+<div id="51c472d2-a5d9-4ea1-9c1c-ce0744da519d"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#c4fc2fbe-db92-4c9c-a87d-3878b3f16cb1');
+var element = $('#51c472d2-a5d9-4ea1-9c1c-ce0744da519d');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -1777,10 +1767,10 @@ var element = $('#c4fc2fbe-db92-4c9c-a87d-3878b3f16cb1');
 
  
  
-<div id="29037807-1385-4783-b9ba-c244ed96816c"></div>
+<div id="7c11ca9e-39bc-4441-bebc-465bc2273bd2"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#29037807-1385-4783-b9ba-c244ed96816c');
+var element = $('#7c11ca9e-39bc-4441-bebc-465bc2273bd2');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}
@@ -1884,13 +1874,38 @@ var element = $('#29037807-1385-4783-b9ba-c244ed96816c');
 }
 </script>
 
-  </div><!-- /.entry-content -->
-</section>
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="./spotify-playlists.html">posted at 00:23</a>
+                    &nbsp;&middot;&nbsp;<a href="./category/music.html" rel="tag">music</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="./tag/entertainment.html" class="tags">entertainment</a>
+                    &nbsp;<a href="./tag/machine-learning.html" class="tags">machine learning</a>
+                    &nbsp;<a href="./tag/playlists.html" class="tags">playlists</a>
+                </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-sampurkiss-github-io';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="./feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
 </body>
 </html>

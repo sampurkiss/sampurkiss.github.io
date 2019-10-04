@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io/feeds/just-for-fun.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-05-19T20:00:00-04:00</updated><entry><title>The Zombie Uprising (and how to win)</title><link href="sampurkiss.github.io/game-of-thrones-math-problem.html" rel="alternate"></link><published>2019-05-19T20:00:00-04:00</published><updated>2019-05-19T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:,2019-05-19:sampurkiss.github.io/game-of-thrones-math-problem.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - Just for fun</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/just-for-fun.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-05-19T20:00:00-04:00</updated><entry><title>The Zombie Uprising (and how to win)</title><link href="sampurkiss.github.io%5Cgame-of-thrones-math-problem.html" rel="alternate"></link><published>2019-05-19T20:00:00-04:00</published><updated>2019-05-19T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-05-19:sampurkiss.github.io\game-of-thrones-math-problem.html</id><summary type="html">&lt;p&gt;Gender differences in movie ratings are surprisingly pronounced. I find that the more female ratings a movie has, the lower men tend to rate it.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1333,4 +1333,4 @@ Therefore it doesn't matter what size the dead army is, as long as the army of t
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="math"></category><category term="game of thrones"></category></entry></feed>
+</content><category term="math"></category><category term="game of thrones"></category></entry></feed>
