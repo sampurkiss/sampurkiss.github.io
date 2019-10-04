@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - Twitter</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/twitter.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-06-04T22:28:00-04:00</updated><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io%5Ctweet-a-quote.html" rel="alternate"></link><published>2019-06-04T12:00:00-04:00</published><updated>2019-06-04T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-06-04:sampurkiss.github.io\tweet-a-quote.html</id><summary type="html">App that lets you submit the name of someone and it will tweet a quote by that person.</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - Twitter</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/twitter.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-08-10T22:28:00-04:00</updated><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io%5Ctweet-a-quote.html" rel="alternate"></link><published>2019-08-10T12:00:00-04:00</published><updated>2019-08-10T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-08-10:sampurkiss.github.io\tweet-a-quote.html</id><summary type="html">App that lets you submit the name of someone and it will tweet a quote by that person.</summary><content type="html">
        &lt;p&gt;Enter in the name of a famous person. Once you submit, my bot will find and tweet a random quote by them. 
 	   You will be able to see the tweet once it's sent.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 		&lt;iframe align="middle" ; frameborder="0;" height="400" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
@@ -30,9 +30,9 @@
 	I always find that when I set out to learn something, I end up learning a million other
 	things I had never thought about. For example, I had never thought about dealing with CSRF, 
 	xframes, switching between GitHub branches, or even the complications of taking values 
-	from user inputs. The lesson of this whole project is that experience really is the best 
+	from user inputs. What I took away from this whole project is that experience really is the best 
 	teacher (and that it's cool to have friends 
-	you can ask for advice - shout out to Monica and Alex).
+	you can go to for advice - shout out to Monica and Alex).
 	&lt;/p&gt;
 	
 	
