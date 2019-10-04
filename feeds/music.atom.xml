@@ -1674,10 +1674,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-&lt;div id="9dfb64da-2c7d-4736-9b9e-500018fff0db"&gt;&lt;/div&gt;
+&lt;div id="cee3e41c-8d98-466c-911e-12d1c3738fbf"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#9dfb64da-2c7d-4736-9b9e-500018fff0db');
+var element = $('#cee3e41c-8d98-466c-911e-12d1c3738fbf');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -1725,10 +1725,10 @@ var element = $('#9dfb64da-2c7d-4736-9b9e-500018fff0db');
 
  
  
-&lt;div id="e9b0074f-c179-453a-b292-987964031426"&gt;&lt;/div&gt;
+&lt;div id="9f57ed6f-7493-4946-a312-8e0d6d46e05b"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#e9b0074f-c179-453a-b292-987964031426');
+var element = $('#9f57ed6f-7493-4946-a312-8e0d6d46e05b');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}
