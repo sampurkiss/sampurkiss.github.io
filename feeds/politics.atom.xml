@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - politics</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/politics.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-10-03T05:56:00-04:00</updated><entry><title>Analysis of Trump's Conversation With Ukraine</title><link href="sampurkiss.github.io%5Ctrump-chats.html" rel="alternate"></link><published>2019-10-03T05:56:00-04:00</published><updated>2019-10-03T05:56:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-10-03:sampurkiss.github.io\trump-chats.html</id><summary type="html">&lt;p&gt;I compared the transcript of Trump's Ukraine call to previous calls in order to find out if the Ukraine transcript is lacking&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - politics</title><link href="http://sampurkiss.github.io/" rel="alternate"></link><link href="http://sampurkiss.github.io%5Cfeeds/politics.atom.xml" rel="self"></link><id>http://sampurkiss.github.io/</id><updated>2019-10-03T05:56:00-04:00</updated><entry><title>Analysis of Trump's Conversation With Ukraine</title><link href="http://sampurkiss.github.io%5Ctrump-chats.html" rel="alternate"></link><published>2019-10-03T05:56:00-04:00</published><updated>2019-10-03T05:56:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\trump-chats.html,2019-10-03:</id><summary type="html">&lt;p&gt;I compared the transcript of Trump's Ukraine call to previous calls in order to find out if the Ukraine transcript is lacking&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1268,7 +1268,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[85]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[88]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;transcript&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;transcript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1277,7 +1277,7 @@ h6:hover .anchor-link {
 	&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;num of words&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;length in mins&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
                                       &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;    
-&lt;span class="n"&gt;words&lt;/span&gt;
+&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1290,7 +1290,7 @@ h6:hover .anchor-link {
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt output_prompt"&gt;Out[85]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[88]:&lt;/div&gt;
 
 
 
@@ -1370,7 +1370,7 @@ h6:hover .anchor-link {
 							  &lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
                                       &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;words_per_speaker&lt;/span&gt;
+&lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/all.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-10-03T05:56:00-04:00</updated><entry><title>Analysis of Trump's Conversation With Ukraine</title><link href="sampurkiss.github.io%5Ctrump-chats.html" rel="alternate"></link><published>2019-10-03T05:56:00-04:00</published><updated>2019-10-03T05:56:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-10-03:sampurkiss.github.io\trump-chats.html</id><summary type="html">&lt;p&gt;I compared the transcript of Trump's Ukraine call to previous calls in order to find out if the Ukraine transcript is lacking&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog</title><link href="http://sampurkiss.github.io/" rel="alternate"></link><link href="http://sampurkiss.github.io%5Cfeeds/all.atom.xml" rel="self"></link><id>http://sampurkiss.github.io/</id><updated>2019-10-03T05:56:00-04:00</updated><entry><title>Analysis of Trump's Conversation With Ukraine</title><link href="http://sampurkiss.github.io%5Ctrump-chats.html" rel="alternate"></link><published>2019-10-03T05:56:00-04:00</published><updated>2019-10-03T05:56:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\trump-chats.html,2019-10-03:</id><summary type="html">&lt;p&gt;I compared the transcript of Trump's Ukraine call to previous calls in order to find out if the Ukraine transcript is lacking&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1268,7 +1268,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[85]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[88]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;transcript&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;transcript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1277,7 +1277,7 @@ h6:hover .anchor-link {
 	&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;num of words&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;length in mins&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
                                       &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;    
-&lt;span class="n"&gt;words&lt;/span&gt;
+&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1290,7 +1290,7 @@ h6:hover .anchor-link {
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt output_prompt"&gt;Out[85]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[88]:&lt;/div&gt;
 
 
 
@@ -1370,7 +1370,7 @@ h6:hover .anchor-link {
 							  &lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;words per min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
                                       &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;words_per_speaker&lt;/span&gt;
+&lt;span class="n"&gt;words_per_speaker&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1507,7 +1507,7 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="entertainment"></category><category term="text analysis"></category><category term="Trump"></category><category term="politics"></category><category term="unstructured data"></category></entry><entry><title>Tweet a Quote</title><link href="sampurkiss.github.io%5Ctweet-a-quote.html" rel="alternate"></link><published>2019-08-10T12:00:00-04:00</published><updated>2019-08-10T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-08-10:sampurkiss.github.io\tweet-a-quote.html</id><summary type="html">App that lets you submit the name of someone and it will tweet a quote by that person.</summary><content type="html">
+</content><category term="entertainment"></category><category term="text analysis"></category><category term="Trump"></category><category term="politics"></category><category term="unstructured data"></category></entry><entry><title>Tweet a Quote</title><link href="http://sampurkiss.github.io%5Ctweet-a-quote.html" rel="alternate"></link><published>2019-08-10T12:00:00-04:00</published><updated>2019-08-10T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\tweet-a-quote.html,2019-08-10:</id><summary type="html">App that lets you submit the name of someone and it will tweet a quote by that person.</summary><content type="html">
        &lt;p&gt;Enter in the name of a famous person. Once you submit, my bot will find and tweet a random quote by them. 
 	   You will be able to see the tweet once it's sent.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 		&lt;iframe align="middle" ; frameborder="0;" height="400" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/"&gt;
@@ -1544,7 +1544,7 @@ h6:hover .anchor-link {
 	&lt;/p&gt;
 	
 	
-    </content><category term="twitter"></category><category term="django"></category><category term="twitterbot"></category></entry><entry><title>K-means Clustering to Create Custom Spotify Playlists</title><link href="sampurkiss.github.io%5Cspotify-playlists.html" rel="alternate"></link><published>2019-06-02T00:23:00-04:00</published><updated>2019-06-02T00:23:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-06-02:sampurkiss.github.io\spotify-playlists.html</id><summary type="html">&lt;p&gt;I took 20 years of weekly billboard top 100 songs and created custom playlists based off songs that are similar to each other.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+    </content><category term="twitter"></category><category term="django"></category><category term="twitterbot"></category></entry><entry><title>K-means Clustering to Create Custom Spotify Playlists</title><link href="http://sampurkiss.github.io%5Cspotify-playlists.html" rel="alternate"></link><published>2019-06-02T00:23:00-04:00</published><updated>2019-06-02T00:23:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\spotify-playlists.html,2019-06-02:</id><summary type="html">&lt;p&gt;I took 20 years of weekly billboard top 100 songs and created custom playlists based off songs that are similar to each other.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -3219,10 +3219,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-&lt;div id="3dd2f8e5-ef1b-47f5-b0b4-7435f624e15b"&gt;&lt;/div&gt;
+&lt;div id="119c5c04-6141-4617-af00-638ce326aa52"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#3dd2f8e5-ef1b-47f5-b0b4-7435f624e15b');
+var element = $('#119c5c04-6141-4617-af00-638ce326aa52');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -3270,10 +3270,10 @@ var element = $('#3dd2f8e5-ef1b-47f5-b0b4-7435f624e15b');
 
  
  
-&lt;div id="fbd8c633-db3d-46e7-b543-6ee77c5ce2bd"&gt;&lt;/div&gt;
+&lt;div id="4a29fadb-7ac9-4814-8b42-7768ac0c9c12"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#fbd8c633-db3d-46e7-b543-6ee77c5ce2bd');
+var element = $('#4a29fadb-7ac9-4814-8b42-7768ac0c9c12');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}
@@ -3376,7 +3376,7 @@ var element = $('#fbd8c633-db3d-46e7-b543-6ee77c5ce2bd');
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="entertainment"></category><category term="machine learning"></category><category term="playlists"></category></entry><entry><title>The Zombie Uprising (and how to win)</title><link href="sampurkiss.github.io%5Cgame-of-thrones-math-problem.html" rel="alternate"></link><published>2019-05-19T20:00:00-04:00</published><updated>2019-05-19T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-05-19:sampurkiss.github.io\game-of-thrones-math-problem.html</id><summary type="html">&lt;p&gt;Gender differences in movie ratings are surprisingly pronounced. I find that the more female ratings a movie has, the lower men tend to rate it.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+</content><category term="entertainment"></category><category term="machine learning"></category><category term="playlists"></category></entry><entry><title>The Zombie Uprising (and how to win)</title><link href="http://sampurkiss.github.io%5Cgame-of-thrones-math-problem.html" rel="alternate"></link><published>2019-05-19T20:00:00-04:00</published><updated>2019-05-19T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\game-of-thrones-math-problem.html,2019-05-19:</id><summary type="html">&lt;p&gt;Gender differences in movie ratings are surprisingly pronounced. I find that the more female ratings a movie has, the lower men tend to rate it.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -4710,7 +4710,7 @@ Therefore it doesn't matter what size the dead army is, as long as the army of t
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="math"></category><category term="game of thrones"></category></entry><entry><title>TV Show Ratings</title><link href="sampurkiss.github.io%5Ctv-show-ratings.html" rel="alternate"></link><published>2019-05-17T22:28:00-04:00</published><updated>2019-05-17T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-05-17:sampurkiss.github.io\tv-show-ratings.html</id><summary type="html">App to visualize historical tv show ratings over time.</summary><content type="html">
+</content><category term="math"></category><category term="game of thrones"></category></entry><entry><title>TV Show Ratings</title><link href="http://sampurkiss.github.io%5Ctv-show-ratings.html" rel="alternate"></link><published>2019-05-17T22:28:00-04:00</published><updated>2019-05-17T22:28:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\tv-show-ratings.html,2019-05-17:</id><summary type="html">App to visualize historical tv show ratings over time.</summary><content type="html">
        &lt;p&gt;Have you ever wondered if your favourite TV show has 
 	   gotten worse over time (where are those Game of Thrones 
 	   fans at?). Or maybe you're going to re-watch The Office 
@@ -4728,7 +4728,7 @@ Therefore it doesn't matter what size the dead army is, as long as the army of t
 		you can check out my code &lt;a href="https://github.com/sampurkiss/movie_ratings_imdb/blob/master/dash_app.py"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;br&gt;
 		You can also check out the dataset I put together 
 		using IMDB data &lt;a href="https://raw.githubusercontent.com/sampurkiss/movie_ratings_imdb/master/episode_rating_database.csv"&gt;&lt;font color="blue"&gt;&lt;b&gt;here&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;.&lt;/p&gt;
-    </content><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Gender Differences in Movie Ratings</title><link href="sampurkiss.github.io%5Cmovie-ratings.html" rel="alternate"></link><published>2019-05-08T20:00:00-04:00</published><updated>2019-05-08T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-05-08:sampurkiss.github.io\movie-ratings.html</id><summary type="html">&lt;p&gt;Gender differences in movie ratings are surprisingly pronounced. I find that the more female ratings a movie has, the lower men tend to rate it.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+    </content><category term="tv show"></category><category term="historical"></category><category term="ratings"></category></entry><entry><title>Gender Differences in Movie Ratings</title><link href="http://sampurkiss.github.io%5Cmovie-ratings.html" rel="alternate"></link><published>2019-05-08T20:00:00-04:00</published><updated>2019-05-08T20:00:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\movie-ratings.html,2019-05-08:</id><summary type="html">&lt;p&gt;Gender differences in movie ratings are surprisingly pronounced. I find that the more female ratings a movie has, the lower men tend to rate it.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -6492,7 +6492,7 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="movie ratings"></category></entry><entry><title>Simulating the Monty Hall Problem</title><link href="sampurkiss.github.io%5Cmonty-hall-problem.html" rel="alternate"></link><published>2019-02-02T14:00:00-05:00</published><updated>2019-02-02T14:00:00-05:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-02-02:sampurkiss.github.io\monty-hall-problem.html</id><summary type="html">&lt;p&gt;I simulated the Monty Hall problem 1,000 times to see what the probabilities of picking a new door converged to.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+</content><category term="movie ratings"></category></entry><entry><title>Simulating the Monty Hall Problem</title><link href="http://sampurkiss.github.io%5Cmonty-hall-problem.html" rel="alternate"></link><published>2019-02-02T14:00:00-05:00</published><updated>2019-02-02T14:00:00-05:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\monty-hall-problem.html,2019-02-02:</id><summary type="html">&lt;p&gt;I simulated the Monty Hall problem 1,000 times to see what the probabilities of picking a new door converged to.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *

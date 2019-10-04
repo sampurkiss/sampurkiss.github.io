@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - music</title><link href="sampurkiss.github.io/" rel="alternate"></link><link href="sampurkiss.github.io%5Cfeeds/music.atom.xml" rel="self"></link><id>sampurkiss.github.io/</id><updated>2019-06-02T00:23:00-04:00</updated><entry><title>K-means Clustering to Create Custom Spotify Playlists</title><link href="sampurkiss.github.io%5Cspotify-playlists.html" rel="alternate"></link><published>2019-06-02T00:23:00-04:00</published><updated>2019-06-02T00:23:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:None,2019-06-02:sampurkiss.github.io\spotify-playlists.html</id><summary type="html">&lt;p&gt;I took 20 years of weekly billboard top 100 songs and created custom playlists based off songs that are similar to each other.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - music</title><link href="http://sampurkiss.github.io/" rel="alternate"></link><link href="http://sampurkiss.github.io%5Cfeeds/music.atom.xml" rel="self"></link><id>http://sampurkiss.github.io/</id><updated>2019-06-02T00:23:00-04:00</updated><entry><title>K-means Clustering to Create Custom Spotify Playlists</title><link href="http://sampurkiss.github.io%5Cspotify-playlists.html" rel="alternate"></link><published>2019-06-02T00:23:00-04:00</published><updated>2019-06-02T00:23:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\spotify-playlists.html,2019-06-02:</id><summary type="html">&lt;p&gt;I took 20 years of weekly billboard top 100 songs and created custom playlists based off songs that are similar to each other.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1674,10 +1674,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-&lt;div id="3dd2f8e5-ef1b-47f5-b0b4-7435f624e15b"&gt;&lt;/div&gt;
+&lt;div id="119c5c04-6141-4617-af00-638ce326aa52"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#3dd2f8e5-ef1b-47f5-b0b4-7435f624e15b');
+var element = $('#119c5c04-6141-4617-af00-638ce326aa52');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "39b89cf3e97e477387e70ea524836e61", "version_major": 2, "version_minor": 0}
@@ -1725,10 +1725,10 @@ var element = $('#3dd2f8e5-ef1b-47f5-b0b4-7435f624e15b');
 
  
  
-&lt;div id="fbd8c633-db3d-46e7-b543-6ee77c5ce2bd"&gt;&lt;/div&gt;
+&lt;div id="4a29fadb-7ac9-4814-8b42-7768ac0c9c12"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#fbd8c633-db3d-46e7-b543-6ee77c5ce2bd');
+var element = $('#4a29fadb-7ac9-4814-8b42-7768ac0c9c12');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "48ceded9e804400dbef421eeecb66d11", "version_major": 2, "version_minor": 0}

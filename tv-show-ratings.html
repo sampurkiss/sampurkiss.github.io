@@ -1,89 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Sam's Blog</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
-        <!-- twitter card metadata -->
-<meta name="twitter:site" content="">
-<meta name="twitter:title" content="TV Show Ratings">
-<meta name="twitter:description" content="">
-        <!-- OG Tags -->
-<meta property="og:url" content="/tv-show-ratings.html"/>
-<meta property="og:title" content="Sam's Blog | TV Show Ratings" />
-<meta property="og:description" content="" />
-        <!-- favicon -->
-        <!-- moment.js for date formatting -->
-        <script src="/theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-    
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-            
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sam's Blog | TV Show Ratings</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link href="http://sampurkiss.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sam's Blog Full Atom Feed" />
+    <link href="http://sampurkiss.github.io/feeds/movies.atom.xml" type="application/atom+xml" rel="alternate" title="Sam's Blog Categories Atom Feed" />
+    <link rel="stylesheet" href="./theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="./theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Sam Purkiss" />
 
-
-    <meta name="tags" content="tv show" />
-    <meta name="tags" content="historical" />
-    <meta name="tags" content="ratings" />
-
+    <meta name="keywords" content="tv show,historical,ratings" />
 </head>
 <body>
-    <div role="banner" id="masthead">
-        <header>
-            <h1><a href="/">'s Blog</a></h1>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                        <li><a href="https://github.com/sampurkiss">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a></li>
-                            <li><a href="/category/just-for-fun.html">Just for fun</a></li>
-                            <li class="active"><a href="/category/movies.html">Movies</a></li>
-                            <li><a href="/category/music.html">music</a></li>
-                            <li><a href="/category/politics.html">politics</a></li>
-                            <li><a href="/category/statistics.html">statistics</a></li>
-                            <li><a href="/category/twitter.html">Twitter</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-        <div class="page" role="main">
-  <div class="article" role="article">
-    <article>
-        <footer>
-            <a name="top"></a>
-            <p>
-              <time datetime=" 2019-05-17 22:28:00-04:00">
-                <script>document.write(moment('2019-05-17 22:28:00-04:00').format('LL'));</script>
-              </time>
-            </p>
-        </footer>
-        <header>
-          <h2>
-            TV Show Ratings
-          </h2>
-        </header>
-      <div class="content">
-         
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="https://github.com/sampurkiss">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/peoplestreetgrams/">My Photography</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="./">Sam's Blog</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">May 17, 2019</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="./tv-show-ratings.html" rel="bookmark" title="Permanent Link to &quot;TV Show Ratings&quot;">TV Show Ratings</a>
+                </h2>
+
+                
+                
+
+                
        <p>Have you ever wondered if your favourite TV show has 
 	   gotten worse over time (where are those Game of Thrones 
 	   fans at?). Or maybe you're going to re-watch The Office 
@@ -102,18 +61,38 @@
 		You can also check out the dataset I put together 
 		using IMDB data <a href="https://raw.githubusercontent.com/sampurkiss/movie_ratings_imdb/master/episode_rating_database.csv"><font color="blue"><b>here</b></font></a>.</p>
     
-      </div>
-      <div class="back-to-top">
-          <a href="#top">back to top</a>
-      </div>
-    </article>
-  </div>
-<!-- end article -->
-                <footer>
-                    <div class="icons">
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> Sam Purkiss</p>
-                </footer>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="./tv-show-ratings.html">posted at 22:28</a>
+                    &nbsp;&middot;&nbsp;<a href="./category/movies.html" rel="tag">Movies</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="./tag/tv-show.html" class="tags">tv show</a>
+                    &nbsp;<a href="./tag/historical.html" class="tags">historical</a>
+                    &nbsp;<a href="./tag/ratings.html" class="tags">ratings</a>
+                </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-sampurkiss-github-io';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="./feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
         </div>
+        <div class="clear"></div>
+    </div>
 </body>
 </html>

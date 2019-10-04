@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Sam's Blog</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <!-- twitter card metadata -->
-        <!-- OG Tags -->
-<meta property="og:url" content="/tag/twitter"/>
-<meta property="og:title" content="Sam's Blog | twitter" />
-        <!-- favicon -->
-        <!-- moment.js for date formatting -->
-        <script src="/theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-    
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["/theme/css/icons.data.svg.css", "/theme/css/icons.data.png.css", "/theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-            
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sam's Blog | articles tagged "twitter"</title>
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link href="http://sampurkiss.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sam's Blog Full Atom Feed" />
+    <link rel="stylesheet" href="../theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="../theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Sam Purkiss" />
 </head>
 <body>
-    <div role="banner" id="masthead">
-        <header>
-            <h1><a href="/">'s Blog</a></h1>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                        <li><a href="https://github.com/sampurkiss">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a></li>
-                            <li><a href="/category/just-for-fun.html">Just for fun</a></li>
-                            <li><a href="/category/movies.html">Movies</a></li>
-                            <li><a href="/category/music.html">music</a></li>
-                            <li><a href="/category/politics.html">politics</a></li>
-                            <li><a href="/category/statistics.html">statistics</a></li>
-                            <li><a href="/category/twitter.html">Twitter</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-        <div class="page" role="main">
-<div class="page-title">
-    <h1>twitter</h1>
-</div>
-<div class="articles">
-        <ol>
-            <li>
-                <article>
-                    <footer>
-                         <p>
-                            <time datetime="2019-08-10 12:00:00-04:00">
-                                <script>document.write(moment('2019-08-10 12:00:00-04:00').format('LL'));</script>
-                            </time>
-                                    in <a href="/category/twitter.html"><span class="category-tag">Twitter</span></a>
-                        </p>
-                    </footer>
-                    <header>
-                        <a href="/tweet-a-quote.html">
-                            <h2>Tweet a Quote</h2>
-                        </a>
-                    </header>
-                    <div class="summary"> </div>
-                    <div class="tags">
-                        <ul class="tags">
-                            <li><a href="/tag/twitter.html" class="tag">twitter</a></li>
-                            <li><a href="/tag/django.html" class="tag">django</a></li>
-                            <li><a href="/tag/twitterbot.html" class="tag">twitterbot</a></li>
-                        </ul>
-                    </div>
-                    <a href="/tweet-a-quote.html">
-                        <p class="readmore">Read more...</p>
-                    </a>
-                </article>
-            </li>
-        </ol>
-        
-</div>                <footer>
-                    <div class="icons">
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> Sam Purkiss</p>
-                </footer>
+    <header>
+        <nav>
+            <ul>
+                <li class="ephemeral selected"><a href="../tag/twitter.html">twitter</a></li>
+                <li><a href="../">Home</a></li>
+                <li><a href="https://github.com/sampurkiss">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/peoplestreetgrams/">My Photography</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="../">Sam's Blog</a></h1>
         </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Aug 10, 2019</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="../tweet-a-quote.html" rel="bookmark" title="Permanent Link to &quot;Tweet a Quote&quot;">Tweet a Quote</a>
+                </h2>
+
+                
+                
+
+                
+       <p>Enter in the name of a famous person. Once you submit, my bot will find and tweet a random quote by them. 
+	   You will be able to see the tweet once it's sent.<br><br></p>
+		<iframe align="middle" ; frameborder="0;" height="400" ; width="80%" ; src="https://twitter-quotes-sp1.herokuapp.com/">
+		</iframe>
+	
+	<p>With each of the things I build, my objective is to learn something I don't know yet.
+	In this case, I wanted to figure out how Django works and get better at deploying apps.
+	I've already done some work with AWS but I wanted to really learn how to build the backend
+	of a website from scratch and how to share it.<br>
+	I already had an existing Twitterbot that would do a bunch of things like tweet a quote
+	every few hours, DM new followers, follow people back, unfollow anyone who unfollowed me
+	(that's right, my bot was built to be petty).<br>
+	I decided to recycle this bot and build something that's actually interactive. Using 
+	Django I built an app that takes a name, searches for it on a specific website
+	and webscrapes a random quote by that person. I kept the quote webscraping component from
+	my previous bot <a href="https://github.com/sampurkiss/twitterbots/blob/master/get_quote_functions.py">
+	(see here for the code) </a> and simply modified it to take a value from an HTML input 
+	form. Then I just had to build a website with a user form, find a way to pass whatever 
+	value was inputted into said form, pass it through my Python functions and return
+	the results on another webpage. Then I had to modify all my scripts so I could
+	actually deploy it for use by the general public. I used Heroku for deployment since
+	I already have some familiarity with it and since it integrates super well with 
+	Django and Github. Lastly, I used my limited HTML knowledge to make it look pretty.<br>
+	Once all that was done I still had to figure out how to embed the webpage into my blog 
+	in such a way that it was seamlessly integrated (and so that it works).<br>
+	Overall, figuring out how to build the backend of a website was tough but I'm really 
+	pleased I was able to make something that works.<br>
+	I always find that when I set out to learn something, I end up learning a million other
+	things I had never thought about. For example, I had never thought about dealing with CSRF, 
+	xframes, switching between GitHub branches, or even the complications of taking values 
+	from user inputs. What I took away from this whole project is that experience really is the best 
+	teacher (and that it's cool to have friends 
+	you can go to for advice - shout out to Monica and Alex).
+	</p>
+	
+	
+    
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="../tweet-a-quote.html">posted at 12:00</a>
+                    &nbsp;&middot;&nbsp;<a href="../category/twitter.html" rel="tag">Twitter</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="../tag/twitter.html" class="tags selected">twitter</a>
+                    &nbsp;<a href="../tag/django.html" class="tags">django</a>
+                    &nbsp;<a href="../tag/twitterbot.html" class="tags">twitterbot</a>
+                </div>
+		<a href="../tweet-a-quote.html#disqus_thread">Click to read and post comments</a>
+            </article>
+
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="../feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
 </body>
 </html>
