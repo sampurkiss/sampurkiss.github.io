@@ -203,3 +203,12 @@ color:#BB60D5;
 .il {
 color:#208050;
 }
+
+/* Additions by sam to fix font colours in jupyter notebooks*/
+
+.n { 
+color: #1C1C1C 
+} /* text */
+.p { 
+color: #1C1C1C 
+} /* Paranthesis */
