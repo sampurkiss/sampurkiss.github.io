@@ -1219,12 +1219,13 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">timedelta</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1242,7 +1243,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">LINK</span> <span class="o">=</span> <span class="s1">&#39;https://spotifycharts.com/regional/us/daily/2019-10-13&#39;</span>
@@ -1260,7 +1261,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[65]:</div>
+    <div class="prompt output_prompt">Out[79]:</div>
 
 
 
@@ -1286,7 +1287,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="spotify_chart_table.png" alt="alt text" title="Title"></p>
+<p><img src="spotify_chart_table.png" width=85% height='auto'></p>
 
 </div>
 </div>
@@ -1301,7 +1302,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -1318,7 +1319,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[67]:</div>
+    <div class="prompt output_prompt">Out[80]:</div>
 
 
 
@@ -1335,47 +1336,7 @@ h6:hover .anchor-link {
  7           NaN           8         NaN   
  8           NaN           9         NaN   
  9           NaN          10         NaN   
- 10          NaN          11         NaN   
- 11          NaN          12         NaN   
- 12          NaN          13         NaN   
- 13          NaN          14         NaN   
- 14          NaN          15         NaN   
- 15          NaN          16         NaN   
- 16          NaN          17         NaN   
- 17          NaN          18         NaN   
- 18          NaN          19         NaN   
- 19          NaN          20         NaN   
- 20          NaN          21         NaN   
- 21          NaN          22         NaN   
- 22          NaN          23         NaN   
- 23          NaN          24         NaN   
- 24          NaN          25         NaN   
- 25          NaN          26         NaN   
- 26          NaN          27         NaN   
- 27          NaN          28         NaN   
- 28          NaN          29         NaN   
- 29          NaN          30         NaN   
  ..          ...         ...         ...   
- 170         NaN         171         NaN   
- 171         NaN         172         NaN   
- 172         NaN         173         NaN   
- 173         NaN         174         NaN   
- 174         NaN         175         NaN   
- 175         NaN         176         NaN   
- 176         NaN         177         NaN   
- 177         NaN         178         NaN   
- 178         NaN         179         NaN   
- 179         NaN         180         NaN   
- 180         NaN         181         NaN   
- 181         NaN         182         NaN   
- 182         NaN         183         NaN   
- 183         NaN         184         NaN   
- 184         NaN         185         NaN   
- 185         NaN         186         NaN   
- 186         NaN         187         NaN   
- 187         NaN         188         NaN   
- 188         NaN         189         NaN   
- 189         NaN         190         NaN   
  190         NaN         191         NaN   
  191         NaN         192         NaN   
  192         NaN         193         NaN   
@@ -1398,47 +1359,7 @@ h6:hover .anchor-link {
  7                                Truth Hurts  by Lizzo   846531  
  8                        hot girl bummer  by blackbear   802471  
  9                     Hot (feat. Gunna)  by Young Thug   754197  
- 10                 Someone You Loved  by Lewis Capaldi   748013  
- 11                              Camelot  by NLE Choppa   725282  
- 12   Sunflower - Spider-Man: Into the Spider-Verse ...   718018  
- 13                                Panini  by Lil Nas X   696129  
- 14         Goodbyes (Feat. Young Thug)  by Post Malone   688207  
- 15           No Guidance (feat. Drake)  by Chris Brown   686433  
- 16   Money In The Grave (Drake ft. Rick Ross)  by D...   655368  
- 17                               Memories  by Maroon 5   644231  
- 18   Take What You Want (feat. Ozzy Osbourne &amp; Trav...   631822  
- 19                        Saint-Tropez  by Post Malone   623289  
- 20                                      BOP  by DaBaby   578261  
- 21                                    VIBEZ  by DaBaby   576941  
- 22                                    F.N  by Lil Tjay   563643  
- 23                           bad guy  by Billie Eilish   548329  
- 24              Enemies (feat. DaBaby)  by Post Malone   547574  
- 25                                     Suge  by DaBaby   546511  
- 26                              Good As Hell  by Lizzo   543159  
- 27                           Señorita  by Shawn Mendes   542306  
- 28      Beautiful People (feat. Khalid)  by Ed Sheeran   535340  
- 29                        Dance Monkey  by Tones and I   520521  
  ..                                                 ...      ...  
- 170                      Tap (feat. Meek Mill)  by NAV   202086  
- 171                         Saturday Nights  by Khalid   201645  
- 172                       i love you  by Billie Eilish   200088  
- 173                 Armed And Dangerous  by Juice WRLD   200034  
- 174                        The Git Up  by Blanco Brown   200008  
- 175            Daddy (feat. Rich The Kid)  by Blueface   198632  
- 176  ME! (feat. Brendon Urie of Panic! At The Disco...   197259  
- 177                          I Like Me Better  by Lauv   196913  
- 178                              Shallow  by Lady Gaga   196912  
- 179         Best Part (feat. Daniel Caesar)  by H.E.R.   196181  
- 180                 Youngblood  by 5 Seconds of Summer   195782  
- 181                                    Uno  by Ambjaay   195212  
- 182                 High Hopes  by Panic! At The Disco   195110  
- 183                             Worth It  by YK Osiris   194510  
- 184                          Be Alright  by Dean Lewis   194439  
- 185                               God&#39;s Plan  by Drake   193244  
- 186  Dancing With A Stranger (with Normani)  by Sam...   193060  
- 187                wish you were gay  by Billie Eilish   192830  
- 188       Psycho (feat. Ty Dolla $ign)  by Post Malone   192664  
- 189                          Soltera - Remix  by Lunay   191865  
  190                       ocean eyes  by Billie Eilish   191494  
  191                              I Like It  by Cardi B   190787  
  192  Costa Rica (with Bas &amp; JID feat. Guapdad 4000,...   190266  
@@ -1469,7 +1390,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1490,7 +1411,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1513,7 +1434,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[69]:</div>
+    <div class="prompt output_prompt">Out[82]:</div>
 
 
 
@@ -1611,7 +1532,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_daily_chart_data</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">region</span> <span class="o">=</span><span class="s1">&#39;us&#39;</span><span class="p">):</span>
@@ -1650,7 +1571,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">START_DATE</span> <span class="o">=</span> <span class="s1">&#39;2018-10-01&#39;</span>
@@ -1665,7 +1586,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -1694,10 +1615,10 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">,</span> <span class="s1">&#39;Song&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">,</span> <span class="s1">&#39;Song&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
  <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Artist&#39;</span><span class="p">)[</span><span class="s1">&#39;Song&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
  <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Song&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -1712,7 +1633,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[73]:</div>
+    <div class="prompt output_prompt">Out[89]:</div>
 
 
 
@@ -1812,7 +1733,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Song&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Streams&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1828,7 +1749,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[63]:</div>
+    <div class="prompt output_prompt">Out[90]:</div>
 
 
 
@@ -1928,7 +1849,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Streams&#39;</span><span class="p">)</span>
@@ -1944,13 +1865,13 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[77]:</div>
+    <div class="prompt output_prompt">Out[91]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20564902828&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20564a52860&gt;</pre>
 </div>
 
 </div>
