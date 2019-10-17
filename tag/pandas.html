@@ -1219,7 +1219,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1243,7 +1243,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">LINK</span> <span class="o">=</span> <span class="s1">&#39;https://spotifycharts.com/regional/us/daily/2019-10-13&#39;</span>
@@ -1261,7 +1261,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[79]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -1302,7 +1302,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -1319,7 +1319,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[80]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -1383,14 +1383,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that the output is actually in list form. Often it's the case that Pandas will read in more than one table from the HTML code so you need to think about which table you want and then how to pull that table from the list and/or how to save each table to individual variables. Here it's easy so we can just take the 0th list value.</p>
+<p>Note that the output is actually in list form. Often it's the case that Pandas will read in more than one table from the HTML code so you need to think about which table you want and then how to pull that table from the list and/or how to save each table to individual variables. Here it's easy, we can just take the 0th value from the list.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1404,14 +1404,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we have the data in a DataFrame and we need to clean it up. What I want to do is have track title and artist in seperate columns, drop empty columns, and properly name all remaining columns. We should also add a date column so when we look at the table again we know what date it's for. Fortunately, there's not much more cleaning required than that.</p>
+<p>Now that we have the data in a DataFrame we need to clean it up. What I want to do is have track title and artist in seperate columns, drop empty columns, and properly name all remaining columns. We should also add a date column so when we look at the table again we know what date it's for. Fortunately, there's not much more cleaning required than that.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1419,7 +1419,7 @@ h6:hover .anchor-link {
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Song&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackname_artist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackname_artist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span><span class="p">{</span><span class="s1">&#39;Unnamed: 1&#39;</span><span class="p">:</span> <span class="s1">&#39;Position&#39;</span><span class="p">,</span>
-								<span class="s1">&#39;Track&#39;</span><span class="p">:</span> <span class="s1">&#39;Full Track Name&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+								<span class="s1">&#39;Track&#39;</span><span class="p">:</span> <span class="s1">&#39;Full Name&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;2019-10-13&#39;</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -1434,7 +1434,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[82]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -1458,7 +1458,7 @@ h6:hover .anchor-link {
     <tr style="text-align: right;">
       <th></th>
       <th>Position</th>
-      <th>Full Track Name</th>
+      <th>Full Name</th>
       <th>Streams</th>
       <th>Song</th>
       <th>Artist</th>
@@ -1525,14 +1525,14 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Having one day of data may not be enough, and in the case of my project, we needed 40 days worth. The easiest way to get 40 days of data (which requires scraping 40 different webpages) is to make a flexible function and loop through it, which I've done below. If you do want to scrape the top 200, this function will work well. You just need to specify the date you need the data and which region you want the data for.</p>
+<h2 id="Putting-it-all-together:">Putting it all together:<a class="anchor-link" href="#Putting-it-all-together:">&#182;</a></h2><p>Having one day of data may not be enough, and in the case of my project, we needed 40 days worth. The easiest way to get 40 days of data (which requires scraping 40 different webpages) is to make a flexible function and loop through it, which I've done below. If you do want to scrape the top 200, this function will work well. You just need to specify the date you need the data and which region you want the data for.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_daily_chart_data</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">region</span> <span class="o">=</span><span class="s1">&#39;us&#39;</span><span class="p">):</span>
@@ -1571,7 +1571,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">START_DATE</span> <span class="o">=</span> <span class="s1">&#39;2018-10-01&#39;</span>
@@ -1586,7 +1586,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -1597,7 +1597,7 @@ h6:hover .anchor-link {
 		<span class="n">songs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">songs</span><span class="p">,</span> <span class="n">temp</span><span class="p">])</span>
 		<span class="n">START_DATE</span> <span class="o">=</span> <span class="n">START_DATE</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 		
-	<span class="n">songs</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+	<span class="n">songs</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1615,7 +1615,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">,</span> <span class="s1">&#39;Song&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -1633,7 +1633,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[89]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -1733,7 +1733,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Song&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Streams&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1749,7 +1749,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[90]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -1849,10 +1849,10 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Streams&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Streams&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1862,19 +1862,6 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[91]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20564a52860&gt;</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
