@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Sam's Blog - education</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <meta name="author" content="Sam Purkiss" />
+        <meta name="copyright" content="Sam Purkiss" />
+        <meta name="robots" content="noindex,follow">
+
+        <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+		
+		<!--
+		Below is added so that plotly graphs show up
+			-->
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <!--[if IE]>
+                <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../css/ie.css"/>
+                <script src="../js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="..">Sam's Blog </a></h1>
+                <nav>
+                    <a href="https://github.com/sampurkiss">GitHub</a>&nbsp;
+                    <a href="https://www.linkedin.com/in/samuelpurkiss/">LinkedIn</a>&nbsp;
+                    <a href="https://www.instagram.com/peoplestreetgrams/">My Photography</a>&nbsp;
+<!--            Below adds category lists to header. Removed to avoid cluttering header    
+                    <a href="../category/education.html">education</a>&nbsp;
+                    <a href="../category/just-for-fun.html">Just for fun</a>&nbsp;
+                    <a href="../category/movies.html">movies</a>&nbsp;
+                    <a href="../category/music.html">music</a>&nbsp;
+                    <a href="../category/politics.html">politics</a>&nbsp;
+                    <a href="../category/statistics.html">statistics</a>&nbsp;
+                    <a href="../category/twitter.html">Twitter</a>&nbsp;
+ -->
+                </nav>
+        </header><!-- /#banner -->
+        
+        
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="../webscraping.html">Webscraping Made Easy With Pandas</a></h1> 
+<footer class="post-info">
+        <abbr class="published" title="2019-10-15T14:30:00-04:00">
+                Tue 15 October 2019
+        </abbr>
+<p>tags: <a href="../tag/music.html">music</a><a href="../tag/webscraping.html">webscraping</a><a href="../tag/pandas.html">pandas</a></p></footer><!-- /.post-info --><style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I work a ton with data. It's fun. But sometimes I need data that's just not readily available. Sure, maybe it exists on a website somewhere, but who has the time to sit and download data over and over. I started developing webscraping scripts a few months back when I realized I could collect all the data I needed with minimal manual work. As I've learned more and more ways to download increasingly complicated data, I've also learned how to make the process much faster.</p>
+<p>One of the best methods I've discovered for quick and easy scraping is using Pandas DataFrames. I used to write code that used regex to loop through HTML and build tables, but that process can take forever. In this blog I'll show you how I scraped the Spotify Top 200 Charts in order to give you a quick run through of how you can use Pandas to speed up your webscraping.</p>
+<p>I'll be walking through a script I wrote while working on a project where a music streaming company was suing a musician. In order to calculate damages we wanted to gather data on the artists playcounts so we could better quantify the value of being on the service.</p>
+<p>You're only going to need three packages: Pandas, Requests, and Datetime. In case you're not familiar, Requests is really useful anytime you need to use Python to request information from a website. <a href="https://realpython.com/python-requests/">(See here for a useful guide)</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">timedelta</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can start by opening the <a href="https://spotifycharts.com/regional/us/daily/2019-10-13">link</a> to the spotify charts for October 13, 2019 with the Requests package and getting an idea of what the HTML code looks like. Once you've opened the link, you can use the responses text attribute to view the HTML.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">LINK</span> <span class="o">=</span> <span class="s1">&#39;https://spotifycharts.com/regional/us/daily/2019-10-13&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">LINK</span><span class="p">)</span>
+<span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2000</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&lt;!doctype html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=&#34;utf-8&#34;&gt;\n        &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge,chrome=1&#34;&gt;\n        &lt;title&gt;Spotify Charts&lt;/title&gt;\n\n        &lt;meta property=&#34;og:title&#34; content=&#34;Spotify Charts&#34;&gt;\n        &lt;meta property=&#34;og:type&#34; content=&#34;website&#34;&gt;\n        &lt;meta property=&#34;og:url&#34; content=&#34;https://www.spotifycharts.com/&#34;&gt;\n        &lt;meta property=&#34;og:image&#34; content=&#34;http://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/open-graph-default.png&#34;&gt;\n        &lt;meta property=&#34;og:description&#34; content=&#34;Spotify is all the music you’ll ever need.&#34;&gt;\n\n        &lt;meta name=&#34;description&#34; content=&#34;Spotify is all the music you’ll ever need.&#34;&gt;\n        &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;\n        &lt;link rel=&#34;apple-touch-icon-precomposed&#34; sizes=&#34;144x144&#34; href=&#34;/images/touch-icon-144.png&#34;&gt;\n        &lt;link rel=&#34;apple-touch-icon-precomposed&#34; sizes=&#34;114x114&#34; href=&#34;/images/touch-icon-114.png&#34;&gt;\n        &lt;link rel=&#34;apple-touch-icon-precomposed&#34; sizes=&#34;72x72&#34; href=&#34;/images/touch-icon-72.png&#34;&gt;\n        &lt;link rel=&#34;apple-touch-icon-precomposed&#34; href=&#34;/images/touch-icon-57.png&#34;&gt;\n        &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/css/app.css&#34;&gt;\n        &lt;script&gt;\n            window.log = function () {\n                log.history = log.history || [];\n                log.history.push(arguments);\n                if (this.console) {\n                    console.log(Array.prototype.slice.call(arguments))\n                }\n            };\n        &lt;/script&gt;\n        &lt;script&gt;\n            var ROUTE_PARAMS = {type: \&#39;regional\&#39;, country: \&#39;us\&#39;, recurrence: \&#39;daily\&#39;, date: \&#39;2019-10-13\&#39;};\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;!--[if lt IE 9]&gt;\n          &lt;p class=&#34;browsehappy&#34;&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=&#34;http://browsehappy.com/&#34;&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;\n        &lt;![endif]--&gt;\n\n            &lt;div id=&#34;content&#34;&gt;\n        &lt;div&gt;\n            &lt;header class=&#34;header&#34;&gt;\n                &lt;div &#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The HTML alone isn't really that useful, except maybe to show that we're able to download the text. What we want to be able to do is download the table embedded in the HTML that has artist, song, and play count information that we can see below. You can check the HTML code on the website to confirm existence of the table tag. Pandas will look for that tag and will pull the HTML code underneath it into table form.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="spotify_chart_table.png" alt="alt text" title="Title"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Luckily, now that we have the HTML, it's really easy to pull this into a DataFrame. All we need to do is run the HTML text through the Pandas read_html function and we will have a table with all the information we need. It's important to convert the response output (or whichever program you're using to scrape the webpage) to readable HTML first.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[     Unnamed: 0  Unnamed: 1  Unnamed: 2  \
+ 0           NaN           1         NaN   
+ 1           NaN           2         NaN   
+ 2           NaN           3         NaN   
+ 3           NaN           4         NaN   
+ 4           NaN           5         NaN   
+ 5           NaN           6         NaN   
+ 6           NaN           7         NaN   
+ 7           NaN           8         NaN   
+ 8           NaN           9         NaN   
+ 9           NaN          10         NaN   
+ 10          NaN          11         NaN   
+ 11          NaN          12         NaN   
+ 12          NaN          13         NaN   
+ 13          NaN          14         NaN   
+ 14          NaN          15         NaN   
+ 15          NaN          16         NaN   
+ 16          NaN          17         NaN   
+ 17          NaN          18         NaN   
+ 18          NaN          19         NaN   
+ 19          NaN          20         NaN   
+ 20          NaN          21         NaN   
+ 21          NaN          22         NaN   
+ 22          NaN          23         NaN   
+ 23          NaN          24         NaN   
+ 24          NaN          25         NaN   
+ 25          NaN          26         NaN   
+ 26          NaN          27         NaN   
+ 27          NaN          28         NaN   
+ 28          NaN          29         NaN   
+ 29          NaN          30         NaN   
+ ..          ...         ...         ...   
+ 170         NaN         171         NaN   
+ 171         NaN         172         NaN   
+ 172         NaN         173         NaN   
+ 173         NaN         174         NaN   
+ 174         NaN         175         NaN   
+ 175         NaN         176         NaN   
+ 176         NaN         177         NaN   
+ 177         NaN         178         NaN   
+ 178         NaN         179         NaN   
+ 179         NaN         180         NaN   
+ 180         NaN         181         NaN   
+ 181         NaN         182         NaN   
+ 182         NaN         183         NaN   
+ 183         NaN         184         NaN   
+ 184         NaN         185         NaN   
+ 185         NaN         186         NaN   
+ 186         NaN         187         NaN   
+ 187         NaN         188         NaN   
+ 188         NaN         189         NaN   
+ 189         NaN         190         NaN   
+ 190         NaN         191         NaN   
+ 191         NaN         192         NaN   
+ 192         NaN         193         NaN   
+ 193         NaN         194         NaN   
+ 194         NaN         195         NaN   
+ 195         NaN         196         NaN   
+ 196         NaN         197         NaN   
+ 197         NaN         198         NaN   
+ 198         NaN         199         NaN   
+ 199         NaN         200         NaN   
+ 
+                                                  Track  Streams  
+ 0                 HIGHEST IN THE ROOM  by Travis Scott  1611989  
+ 1                              Circles  by Post Malone  1189990  
+ 2    Bandit (with YoungBoy Never Broke Again)  by J...  1174811  
+ 3                           Lights Up  by Harry Styles  1089354  
+ 4     10,000 Hours (with Justin Bieber)  by Dan + Shay   918608  
+ 5                                 Ransom  by Lil Tecca   859449  
+ 6                223&#39;s (feat. 9lokknine)  by YNW Melly   857946  
+ 7                                Truth Hurts  by Lizzo   846531  
+ 8                        hot girl bummer  by blackbear   802471  
+ 9                     Hot (feat. Gunna)  by Young Thug   754197  
+ 10                 Someone You Loved  by Lewis Capaldi   748013  
+ 11                              Camelot  by NLE Choppa   725282  
+ 12   Sunflower - Spider-Man: Into the Spider-Verse ...   718018  
+ 13                                Panini  by Lil Nas X   696129  
+ 14         Goodbyes (Feat. Young Thug)  by Post Malone   688207  
+ 15           No Guidance (feat. Drake)  by Chris Brown   686433  
+ 16   Money In The Grave (Drake ft. Rick Ross)  by D...   655368  
+ 17                               Memories  by Maroon 5   644231  
+ 18   Take What You Want (feat. Ozzy Osbourne &amp; Trav...   631822  
+ 19                        Saint-Tropez  by Post Malone   623289  
+ 20                                      BOP  by DaBaby   578261  
+ 21                                    VIBEZ  by DaBaby   576941  
+ 22                                    F.N  by Lil Tjay   563643  
+ 23                           bad guy  by Billie Eilish   548329  
+ 24              Enemies (feat. DaBaby)  by Post Malone   547574  
+ 25                                     Suge  by DaBaby   546511  
+ 26                              Good As Hell  by Lizzo   543159  
+ 27                           Señorita  by Shawn Mendes   542306  
+ 28      Beautiful People (feat. Khalid)  by Ed Sheeran   535340  
+ 29                        Dance Monkey  by Tones and I   520521  
+ ..                                                 ...      ...  
+ 170                      Tap (feat. Meek Mill)  by NAV   202086  
+ 171                         Saturday Nights  by Khalid   201645  
+ 172                       i love you  by Billie Eilish   200088  
+ 173                 Armed And Dangerous  by Juice WRLD   200034  
+ 174                        The Git Up  by Blanco Brown   200008  
+ 175            Daddy (feat. Rich The Kid)  by Blueface   198632  
+ 176  ME! (feat. Brendon Urie of Panic! At The Disco...   197259  
+ 177                          I Like Me Better  by Lauv   196913  
+ 178                              Shallow  by Lady Gaga   196912  
+ 179         Best Part (feat. Daniel Caesar)  by H.E.R.   196181  
+ 180                 Youngblood  by 5 Seconds of Summer   195782  
+ 181                                    Uno  by Ambjaay   195212  
+ 182                 High Hopes  by Panic! At The Disco   195110  
+ 183                             Worth It  by YK Osiris   194510  
+ 184                          Be Alright  by Dean Lewis   194439  
+ 185                               God&#39;s Plan  by Drake   193244  
+ 186  Dancing With A Stranger (with Normani)  by Sam...   193060  
+ 187                wish you were gay  by Billie Eilish   192830  
+ 188       Psycho (feat. Ty Dolla $ign)  by Post Malone   192664  
+ 189                          Soltera - Remix  by Lunay   191865  
+ 190                       ocean eyes  by Billie Eilish   191494  
+ 191                              I Like It  by Cardi B   190787  
+ 192  Costa Rica (with Bas &amp; JID feat. Guapdad 4000,...   190266  
+ 193                      Only Human  by Jonas Brothers   190134  
+ 194             Post Malone (feat. RANI)  by Sam Feldt   189754  
+ 195                                Location  by Khalid   189207  
+ 196  Mixed Personalities (feat. Kanye West)  by YNW...   188963  
+ 197         Ric Flair Drip (&amp; Metro Boomin)  by Offset   188772  
+ 198  Meant to Be (feat. Florida Georgia Line)  by B...   188597  
+ 199     Routine (feat. Rick Ross &amp; Meek Mill)  by Wale   187964  
+ 
+ [200 rows x 5 columns]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the output is actually in list form. Often it's the case that Pandas will read in more than one table from the HTML code so you need to think about which table you want and then how to pull that table from the list and/or how to save each table to individual variables. Here it's easy so we can just take the 0th list value.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we have the data in a DataFrame and we need to clean it up. What I want to do is have track title and artist in seperate columns, drop empty columns, and properly name all remaining columns. We should also add a date column so when we look at the table again we know what date it's for. Fortunately, there's not much more cleaning required than that.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">trackname_artist</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Track&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; by &#39;</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Song&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackname_artist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackname_artist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span><span class="p">{</span><span class="s1">&#39;Unnamed: 1&#39;</span><span class="p">:</span> <span class="s1">&#39;Position&#39;</span><span class="p">,</span>
+								<span class="s1">&#39;Track&#39;</span><span class="p">:</span> <span class="s1">&#39;Full Track Name&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;2019-10-13&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[69]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Position</th>
+      <th>Full Track Name</th>
+      <th>Streams</th>
+      <th>Song</th>
+      <th>Artist</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>HIGHEST IN THE ROOM  by Travis Scott</td>
+      <td>1611989</td>
+      <td>HIGHEST IN THE ROOM</td>
+      <td>Travis Scott</td>
+      <td>2019-10-13</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Circles  by Post Malone</td>
+      <td>1189990</td>
+      <td>Circles</td>
+      <td>Post Malone</td>
+      <td>2019-10-13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Bandit (with YoungBoy Never Broke Again)  by J...</td>
+      <td>1174811</td>
+      <td>Bandit (with YoungBoy Never Broke Again)</td>
+      <td>Juice WRLD</td>
+      <td>2019-10-13</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Lights Up  by Harry Styles</td>
+      <td>1089354</td>
+      <td>Lights Up</td>
+      <td>Harry Styles</td>
+      <td>2019-10-13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>10,000 Hours (with Justin Bieber)  by Dan + Shay</td>
+      <td>918608</td>
+      <td>10,000 Hours (with Justin Bieber)</td>
+      <td>Dan + Shay</td>
+      <td>2019-10-13</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Having one day of data may not be enough, and in the case of my project, we needed 40 days worth. The easiest way to get 40 days of data (which requires scraping 40 different webpages) is to make a flexible function and loop through it, which I've done below. If you do want to scrape the top 200, this function will work well. You just need to specify the date you need the data and which region you want the data for.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_daily_chart_data</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">region</span> <span class="o">=</span><span class="s1">&#39;us&#39;</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	For a given region and given date, pulls that days top 200 songs </span>
+<span class="sd">	and number of plays</span>
+<span class="sd">	date: date in &quot;yyyy-mm-dd&quot; format</span>
+<span class="sd">	region: any that shows up in link when changed here: https://spotifycharts.com/regional</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">LINK</span> <span class="o">=</span> <span class="s1">&#39;https://spotifycharts.com/regional/</span><span class="si">%s</span><span class="s1">/daily/</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+	<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">LINK</span><span class="p">)</span>
+	<span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+	<span class="n">table_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="n">table_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">trackname_artist</span> <span class="o">=</span> <span class="n">table_data</span><span class="p">[</span><span class="s1">&#39;Track&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; by &#39;</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">table_data</span><span class="p">[</span><span class="s1">&#39;Song&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackname_artist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="n">table_data</span><span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trackname_artist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+	<span class="n">table_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span><span class="p">{</span><span class="s1">&#39;Unnamed: 1&#39;</span><span class="p">:</span> <span class="s1">&#39;position&#39;</span><span class="p">,</span>
+								<span class="s1">&#39;Track&#39;</span><span class="p">:</span> <span class="s1">&#39;Full Track Name&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+	<span class="n">table_data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date</span>
+	<span class="k">return</span> <span class="n">table_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we can define a few variables and run the loop. Looping through dates can be a bit weird because you should be starting with datetime formatted dates so you can easily increase the date value but then you need to convert back to string so you can use the date in the function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">START_DATE</span> <span class="o">=</span> <span class="s1">&#39;2018-10-01&#39;</span>
+<span class="n">START_DATE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">START_DATE</span><span class="p">)</span>
+<span class="n">NUMBER_OF_DAYS</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+	<span class="n">songs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">NUMBER_OF_DAYS</span><span class="p">):</span>
+		<span class="n">date</span> <span class="o">=</span> <span class="n">START_DATE</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+		<span class="n">temp</span> <span class="o">=</span> <span class="n">get_daily_chart_data</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+		<span class="n">songs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">songs</span><span class="p">,</span> <span class="n">temp</span><span class="p">])</span>
+		<span class="n">START_DATE</span> <span class="o">=</span> <span class="n">START_DATE</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+		
+	<span class="n">songs</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We now have 10 days of Spotify top 200 data that we can play around with. For example, we could look at which artist had the most number of singles during that time period.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">,</span> <span class="s1">&#39;Song&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+ <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Artist&#39;</span><span class="p">)[</span><span class="s1">&#39;Song&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+ <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Song&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[73]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist</th>
+      <th>Song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>64</th>
+      <td>Lil Wayne</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Lil Baby</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>Twenty One Pilots</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>Logic</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>XXXTENTACION</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Eminem</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Post Malone</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Drake</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Juice WRLD</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Travis Scott</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The top artist during that time period was Lil Wayne with 23 (!!!) singles in the top 200 over the selected 10 days. This isn't a huge surprise since Lil Wayne released his album Tha Carter V at the end of September. What is a surprise is how the top 10 artists with the most different songs on the top 200 are hip-hop(ish). The rise of hip-hop is definitely an area I've been interested in and will explore more in the future.</p>
+<p>We can also see what songs were the most streamed in this time period.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Song&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Streams&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[63]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Song</th>
+      <th>Streams</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>128</th>
+      <td>Mona Lisa (feat. Kendrick Lamar)</td>
+      <td>15891537</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>SICKO MODE</td>
+      <td>13861692</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>Mo Bamba</td>
+      <td>12250699</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>I Love It (&amp; Lil Pump)</td>
+      <td>12091761</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>Falling Down - Bonus Track</td>
+      <td>11666267</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Don't Cry (feat. XXXTENTACION)</td>
+      <td>11386908</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>Lucid Dreams</td>
+      <td>11324346</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>Happier</td>
+      <td>11094688</td>
+    </tr>
+    <tr>
+      <th>204</th>
+      <td>Taki Taki (with Selena Gomez, Ozuna &amp; Cardi B)</td>
+      <td>10696516</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>Uproar</td>
+      <td>9975512</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If there's one thing to take away from this it's that the top 10 most streamed songs during this time period were BANGERS.</p>
+<p>We could even make a quick chart to see how many streams the top 200 songs received on any given day. October 5th is a Friday if you're wondering why there's a big spike on that day.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">songs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">)[</span><span class="s1">&#39;Streams&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Streams&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20564902828&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hopefully by now you have a good idea of how you can get started with webscraping. It's much less daunting than I initially thought and hopefully you feel the same way.</p>
+<p>Since learning webscraping I've been tasked with scraping from websites that really don't me to scrape. I've learned a lot about how to amp up webscraping capabilities by using browser automation which will be a topic for next time.</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+<p>There are <a href="../webscraping.html#disqus_thread">comments</a>.</p>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://sampurkiss.github.io/" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://monicamow.github.io">Check out my friend's data blog</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>. Theme is using <a href="https://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
+                </address><!-- /#about -->
+
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'https-sampurkiss-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
