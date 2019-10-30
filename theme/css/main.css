@@ -89,7 +89,11 @@ h1 a:hover {
 }
 	
 /* Paragraphs */
-p {margin-bottom: 1.143em;}
+p {margin-bottom: 1.143em;
+	color: #404040;
+	font-family: 'Crimson Text';
+	font-size: 16px;
+	padding-top:12px;}
 
 strong, b {font-weight: bold;}
 em, i {font-style: italic;}
@@ -173,51 +177,6 @@ pre:focus {
 
 div.code{
 	position: relative;
-}
-
-pre + button{
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-pre .line-number {
-    float: left;
-    margin: 0 1em 0 -1em;
-    border-right: 1px solid;
-    text-align: right;
-}
-
-pre .line-number span {
-    display: block;
-    padding: 0 .5em 0 1em;
-}
-
-pre .cl {
-    display: block;
-    clear: both;
-}
-
-.codeButton {
-    background-color: transparent;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2x;
-	border: 1px solid;
-	display: inline-block;
-	cursor: pointer;
-	color: #000;
-	font-family: Arial;
-	font-size: 14px;
-	padding: 2px 2px;
-    text-decoration: none;
-    margin: 2px 2px;
-}
-.codeButton:hover  {
-    background-color: transparent;
-}
-.codeButton:active {
-	top: 1px;
 }
 
 /*END NEW*/
@@ -341,6 +300,17 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		border-bottom-left-radius: 5px;
 		-moz-border-radius-bottomleft: 5px;
 		-webkit-border-bottom-left-radius: 5px;
+	}
+	/*selects all a within footer where class is post-info*/
+	.entry-content p{
+		border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-webkit-border-top-left-radius: 5px;
+		
+		border-bottom-left-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		text-shadow:0px 0px 1px #BFBFBF;
 	}
 
 /*
