@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - VBA</title><link href="http://sampurkiss.github.io/" rel="alternate"></link><link href="http://sampurkiss.github.io%5Cfeeds/vba.atom.xml" rel="self"></link><id>http://sampurkiss.github.io/</id><updated>2019-10-24T20:53:00-04:00</updated><entry><title>Search Objects in Excel</title><link href="http://sampurkiss.github.io%5Csearch-objects-in-excel.html" rel="alternate"></link><published>2019-10-24T20:53:00-04:00</published><updated>2019-10-24T20:53:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\search-objects-in-excel.html,2019-10-24:</id><summary type="html">Excel plugin that lets you search objects like text boxes and shapes.</summary><content type="html">
-   &lt;p&gt;
-   If you're just here to download the plugin that lets you search Excel shapes, skip to the bottom. &lt;br&gt;&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - VBA</title><link href="http://sampurkiss.github.io/" rel="alternate"></link><link href="http://sampurkiss.github.io%5Cfeeds/vba.atom.xml" rel="self"></link><id>http://sampurkiss.github.io/</id><updated>2019-10-24T20:53:00-04:00</updated><entry><title>Using VBA to Search Objects in Excel</title><link href="http://sampurkiss.github.io%5Cusing-vba-to-search-objects-in-excel.html" rel="alternate"></link><published>2019-10-24T20:53:00-04:00</published><updated>2019-10-24T20:53:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\using-vba-to-search-objects-in-excel.html,2019-10-24:</id><summary type="html">Excel plugin that lets you search for text in objects like text boxes and shapes.</summary><content type="html">
+
+&lt;p&gt;
+   If you're just here to download the plugin that lets you search text in Excel shapes, skip to the bottom. 
+   &lt;br&gt;&lt;br&gt;
    Excel is a necessary evil. It's not that I don't like the software, it works really well for many things. 
    For some reason it just lacks really useful and obvious functionality. 
    For example, a MAXIFS statement would be very useful, that way I could avoid using clunky array statements to get conditional maximums.
@@ -19,7 +21,8 @@
 	Now I could have done that, but I'm kinda lazy. I don't want to spend all day sitting around manually sifting through shapes in Excel. 
 	So I'm happy to say that after a bit of tweaking I developed a solution using VBA which I've written out below. This function searches all figures in
 	the current workbook tab and selects any figures that match. You can simply copy and paste the code into your module and run it.
-&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Option Explicit
 Sub FindAndSelectShape()
@@ -52,4 +55,5 @@ To make everyone's lives easier, I've saved an Excel plugin &lt;a href="https://
 &lt;a href="https://trumpexcel.com/excel-add-in/"&gt;this blog post&lt;/a&gt; has really good instructions on how to install a custom plugin.
 Once the plugin is installed, you can just press CTRL + SHIFT + F to bring up the search menu. It's really that easy.
 &lt;/p&gt;
-    </content><category term="Excel"></category><category term="VBA"></category><category term="plugin"></category><category term="productivity"></category><category term="Microsoft Office"></category></entry></feed>
+
+</content><category term="Excel"></category><category term="VBA"></category><category term="plugin"></category><category term="productivity"></category><category term="Microsoft Office"></category></entry></feed>

@@ -29,9 +29,9 @@ body {
     padding-top:120px;
 }
 
-code{
-    border:1px solid #343434;
-    background-color:#343434;
+/*code{
+    border:1px solid transparent;
+    background-color:transparent;
     font-size:11px;
     font-style:normal;
     color:#777;
@@ -42,7 +42,7 @@ code{
     padding-bottom:0px;
     font-weight:normal;
     font-family:Consolas, "Liberation Mono", Courier, monospace;
-}
+}*/
 
 /* Headings */
 h1 {font-size: 2em }
@@ -121,7 +121,109 @@ dl {margin: 0 0 1.5em 0;}
 dt {font-weight: bold;}
 dd {margin-left: 1.5em;}
 
-pre{background-color: #000; padding: 10px; color: #fff; margin: 10px; overflow: auto;}
+/*pre{background-color: #000; padding: 10px; color: #fff; margin: 10px; overflow: auto;}*/
+/* below pre codes are new*/
+.post pre, .page pre {
+    background: #ECECEC;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font: normal normal 14px/16px "Courier New",Courier,Monospace;
+    line-height: 1.0;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    padding: .5em 1em;
+    display: block;
+    word-wrap: break-word;
+
+    margin-left: 30px;
+    overflow: auto;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    counter-reset: line;
+}
+
+div pre {
+	    background: #ECECEC;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #343434;
+    page-break-inside: avoid;
+    font: normal normal 14px/16px "Courier New",Courier,Monospace;
+    line-height: 1.0;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    padding: .5em 1em;
+    display: block;
+    word-wrap: break-word;
+
+    margin-left: 30px;
+    overflow: auto;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    counter-reset: line;
+}
+
+pre:hover,
+pre:focus {
+
+    border-left: 3px solid #338df3;
+}
+
+div.code{
+	position: relative;
+}
+
+pre + button{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+pre .line-number {
+    float: left;
+    margin: 0 1em 0 -1em;
+    border-right: 1px solid;
+    text-align: right;
+}
+
+pre .line-number span {
+    display: block;
+    padding: 0 .5em 0 1em;
+}
+
+pre .cl {
+    display: block;
+    clear: both;
+}
+
+.codeButton {
+    background-color: transparent;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2x;
+	border: 1px solid;
+	display: inline-block;
+	cursor: pointer;
+	color: #000;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 2px 2px;
+    text-decoration: none;
+    margin: 2px 2px;
+}
+.codeButton:hover  {
+    background-color: transparent;
+}
+.codeButton:active {
+	top: 1px;
+}
+
+/*END NEW*/
+
+
+
 
 /* Quotes */
 blockquote {
