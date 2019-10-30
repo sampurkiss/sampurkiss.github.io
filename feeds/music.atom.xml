@@ -1669,10 +1669,10 @@ I included most features except for the key variable. When trying to create thes
 
  
  
-&lt;div id="6afd69b8-7851-47ca-9d94-517f68a42164"&gt;&lt;/div&gt;
+&lt;div id="f0f478bf-1793-461c-80fe-1732eb7d41c3"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#6afd69b8-7851-47ca-9d94-517f68a42164');
+var element = $('#f0f478bf-1793-461c-80fe-1732eb7d41c3');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "2a7a3489f06f4e10a57cb679ceaa211d", "version_major": 2, "version_minor": 0}

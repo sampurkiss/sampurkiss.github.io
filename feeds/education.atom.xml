@@ -1392,7 +1392,7 @@ h6:hover .anchor-link {
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 &lt;/style&gt;
 &lt;table border="1" class="dataframe"&gt;
@@ -1591,7 +1591,7 @@ h6:hover .anchor-link {
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 &lt;/style&gt;
 &lt;table border="1" class="dataframe"&gt;
@@ -1707,7 +1707,7 @@ h6:hover .anchor-link {
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 &lt;/style&gt;
 &lt;table border="1" class="dataframe"&gt;
