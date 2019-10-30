@@ -21,8 +21,7 @@
 	the current workbook tab and selects any figures that match. You can simply copy and paste the code into your module and run it.
 &lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-Option Explicit
+&lt;pre&gt;&lt;code&gt;Option Explicit
 Sub FindAndSelectShape()
 Dim shp As Shape
 Dim sFind As String
@@ -44,8 +43,7 @@ If Len(sTemp) Then
 End If
 Next
 MsgBox "Couldn't find any more"
-End Sub
-&lt;/code&gt;&lt;/pre&gt;
+End Sub&lt;/code&gt;&lt;/pre&gt;
 		
 &lt;p&gt;
 Of course, what kind of person has time to open their editor and paste stuff willy nilly. 
