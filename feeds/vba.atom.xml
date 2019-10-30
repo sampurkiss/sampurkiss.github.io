@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sam's Blog - VBA</title><link href="http://sampurkiss.github.io/" rel="alternate"></link><link href="http://sampurkiss.github.io%5Cfeeds/vba.atom.xml" rel="self"></link><id>http://sampurkiss.github.io/</id><updated>2019-10-24T20:53:00-04:00</updated><entry><title>Search Objects in Excel</title><link href="http://sampurkiss.github.io%5Csearch-objects-in-excel.html" rel="alternate"></link><published>2019-10-24T20:53:00-04:00</published><updated>2019-10-24T20:53:00-04:00</updated><author><name>Sam Purkiss</name></author><id>tag:sampurkiss.github.io\search-objects-in-excel.html,2019-10-24:</id><summary type="html">Excel plugin that lets you search objects like text boxes and shapes.</summary><content type="html">
+   &lt;p&gt;
+   If you're just here to download the plugin that lets you search Excel shapes, skip to the bottom. &lt;br&gt;&lt;br&gt;
+   Excel is a necessary evil. It's not that I don't like the software, it works really well for many things. 
+   For some reason it just lacks really useful and obvious functionality. 
+   For example, a MAXIFS statement would be very useful, that way I could avoid using clunky array statements to get conditional maximums.
+   I really don't know why the Microsoft Gods have only given us some IFS functions and not others. 
+   But the most annoying thing I've recently discovered is that Excel doesn't let you search objects. 
+   For example, if you had 1,000 text boxes in your Excel workbook and
+   wanted to search through them to see if any contain some text, you simply couldn't. 
+   Excel has a search function, but it will only find information that's been entered into a cell.
+   &lt;br&gt;&lt;br&gt;
+   This is the issue I faced a few days ago. I was working on a project where I had a massive network web made 
+   manually with shapes like rectangles, text boxes, arrows connecting everything, and so on.
+	Each figure had a name entered into it, and that name was used to identify a node that maps to other figures in the web. 
+	Each time a new figure (or node) was added, it became harder to see which previously added nodes needed to be connected to the new one.
+	I had to manually read through each of the figures to see whether that node existed already. 
+	Now I could have done that, but I'm kinda lazy. I don't want to spend all day sitting around manually sifting through shapes in Excel. 
+	So I'm happy to say that after a bit of tweaking I developed a solution using VBA which I've written out below. This function searches all figures in
+	the current workbook tab and selects any figures that match. You can simply copy and paste the code into your module and run it.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+Option Explicit
+Sub FindAndSelectShape()
+Dim shp As Shape
+Dim sFind As String
+Dim sTemp As String
+
+sFind = InputBox("Find what?", "Find in Shapes")
+If Trim(sFind) = "" Then MsgBox "Nothing entered": Exit Sub
+On Error Resume Next
+For Each shp In ActiveSheet.Shapes
+Debug.Print shp.TopLeftCell.Address
+sTemp = shp.TextFrame.Characters.Text
+If Len(sTemp) Then
+  If InStr(1, sTemp, sFind, 1) Then
+	shp.Select
+	ActiveWindow.ScrollRow = shp.TopLeftCell.Row
+	ActiveWindow.ScrollColumn = shp.TopLeftCell.Column
+	If MsgBox(shp.Name &amp; vbCrLf &amp; sTemp &amp; vbCrLf &amp; vbCrLf &amp; "Do you want to continue?", vbYesNo, "Continue?") &lt;&gt; vbYes Then Exit Sub
+  End If
+End If
+Next
+MsgBox "Couldn't find any more"
+End Sub
+&lt;/code&gt;&lt;/pre&gt;
+		
+&lt;p&gt;
+Of course, what kind of person has time to open their editor and paste stuff willy nilly. 
+To make everyone's lives easier, I've saved an Excel plugin &lt;a href="https://drive.google.com/file/d/1zS6xso9TYgHF_LLxKQ0iZ9_Gfd1MgIB6/view?usp=sharing"&gt;here&lt;/a&gt; 
+(this link will take you to Google Drive where you can download the file). Once you've done that, 
+&lt;a href="https://trumpexcel.com/excel-add-in/"&gt;this blog post&lt;/a&gt; has really good instructions on how to install a custom plugin.
+Once the plugin is installed, you can just press CTRL + SHIFT + F to bring up the search menu. It's really that easy.
+&lt;/p&gt;
+    </content><category term="Excel"></category><category term="VBA"></category><category term="plugin"></category><category term="productivity"></category><category term="Microsoft Office"></category></entry></feed>
