@@ -93,16 +93,16 @@ sFind = InputBox("Find what?", "Find in Shapes")
 If Trim(sFind) = "" Then MsgBox "Nothing entered": Exit Sub
 On Error Resume Next
 For Each shp In ActiveSheet.Shapes
-Debug.Print shp.TopLeftCell.Address
-sTemp = shp.TextFrame.Characters.Text
-If Len(sTemp) Then
-  If InStr(1, sTemp, sFind, 1) Then
-	shp.Select
-	ActiveWindow.ScrollRow = shp.TopLeftCell.Row
-	ActiveWindow.ScrollColumn = shp.TopLeftCell.Column
-	If MsgBox(shp.Name & vbCrLf & sTemp & vbCrLf & vbCrLf & "Do you want to continue?", vbYesNo, "Continue?") <> vbYes Then Exit Sub
-  End If
-End If
+	Debug.Print shp.TopLeftCell.Address
+		sTemp = shp.TextFrame.Characters.Text
+		If Len(sTemp) Then
+			If InStr(1, sTemp, sFind, 1) Then
+				shp.Select
+				ActiveWindow.ScrollRow = shp.TopLeftCell.Row
+				ActiveWindow.ScrollColumn = shp.TopLeftCell.Column
+				If MsgBox(shp.Name & vbCrLf & sTemp & vbCrLf & vbCrLf & "Do you want to continue?", vbYesNo, "Continue?") <> vbYes Then Exit Sub
+				End If
+			End If
 Next
 MsgBox "Couldn't find any more"
 End Sub</code></pre>
